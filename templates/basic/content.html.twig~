@@ -1,0 +1,4 @@
+{% extends 'base.html.twig' %}
+
+{% block header_title %} {{ header_title }} {% endblock %}
+

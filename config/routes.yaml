@@ -1,0 +1,14 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+basic_content:
+     path: /
+     controller: App\Controller\BasicContentController::index
+     
+menu_items:
+     path: menu/items
+     controller: App\Controller\MenuItemsController::index
+
+delete_menu_item:
+     path: menu/{id}/delete
+     controller: App\Controller\MenuItemsController::deleteMenuItem

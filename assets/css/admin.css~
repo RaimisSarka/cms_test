@@ -1,0 +1,172 @@
+body {
+    background-color: snow;
+}
+
+header {
+	 
+}
+
+footer .container {
+	width: 100%;
+	float: left;
+	
+	background: url(/build/images/background.png) no-repeat;
+	background-size: 100%;
+   opacity: 0.9;
+	border-radius: 8px;
+	margin-top: 3em;
+}
+
+
+.container-body-container {
+	width: 100%;
+	float: left;
+	background-size: 100%;
+   opacity: 0.9;
+	border-radius: 8px;
+	margin-top: 3em;
+}
+
+.header-container {
+	padding: 2px;
+   background: url(/build/images/background.png) no-repeat;
+	background-size: 100%;
+   opacity: 0.9;
+   border-radius: 8px;
+   display: table;
+   flex-flow: column;
+   width: 100%;    
+}
+
+.col-logo-pic-container, .col-header-title-container, .col-user-controll-menu-container {
+	float: left;
+	width: 61%;
+	margin: 10px;
+}
+
+.col-logo-pic-container {
+	width: 15%;
+}
+
+.col-header-title-container {
+    vertical-align: center;
+}
+
+.header-title-container {
+	text-align: center;
+   font-size: xx-large;
+   font-style: italic;
+   color: darkgray;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.logo-pic-container {
+	width: 5em;
+	height: 5em;
+}
+
+.logo-pic-container img {
+	width: inherit;
+	height: inherit;
+}
+
+.col-user-controll-menu-container {
+	float: right;
+	text-align: right;
+	width: 15%;
+}
+
+.menu-container {
+	float: left;
+	text-align: left;
+	padding: 5px;
+	width: 100%;
+	margin-bottom: 2em;	
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#menu-item {
+	width: min-content;
+	float: left;
+}
+
+#menu-item a {
+  	display: block;
+ 	border-radius: 8px;
+  	color: gray;;
+  	text-align: center;
+  	padding: 10px;
+  	text-decoration: none;
+}
+
+#menu-item a:hover {
+  background-color: lightgray;
+}
+
+#menu_item {
+	text-align: end;
+}
+
+#menu_item button {
+	width: 20px;
+	height: 20px;
+	background: url(/build/images/del_icon.png) no-repeat;
+	cursor: pointer;
+	border: none;
+  	background-size: 20px auto; /* to specify dimensions explicitly */
+}
+
+.welcome-message {
+   color: #0a0a0a;
+}
+
+.col-form-add-menu-container {
+	float: left;
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 5px;
+	width: 50%;
+	padding: 10px;
+	background: url(/build/images/background.png) no-repeat;
+	background-size: 100%;
+}
+
+.col {
+	float: right;
+	margin: 10px;
+}
+
+.col-form-add-menu-container button{
+	float: right;
+	width: 20em;
+	height: 2em;
+	margin: 10px;
+}
+
+.col input{
+	width: 20em;
+	height: 2em;
+}
+
+.col label{
+	margin: 10px;
+}
+
+.col-menu-items-container {
+	background: url(/build/images/background.png) no-repeat;
+	background-size: 100%;
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 5px;
+	float: right;
+	width: 42%;
+	padding: 10px;
+}
+

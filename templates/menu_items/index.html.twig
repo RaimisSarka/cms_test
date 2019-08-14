@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+	{{ encore_entry_link_tags('admin') }}
+{% endblock %}
+
+{% block header_title %} {{ header_title }} {% endblock %}
+
+{% block body %}
+	<div class="col-form-add-menu-container">
+   	{{ form_start(form) }}
+    		<div class="my-custom-class-for-errors">
+        		{{ form_errors(form) }}
+    		</div>
+    		<div class="row">
+        		<div class="col">
+            	{{ form_row(form.title) }}
+        		</div>
+        		<div class="col">
+            	{{ form_row(form.path_href) }}
+        		</div>
+        		<div class="col">
+            	{{ form_row(form.img_path) }}
+        		</div>
+        		<div class="col">
+            	{{ form_row(form.list_order_number) }}
+        		</div>
+        		<div class="col">
+            	{{ form_row(form.alt) }}
+        		</div>
+    		</div>
+		{{ form_end(form) }}
+   </div>
+   <div class="col-menu-items-container">
+   	{% for item in fetched_items %}
+   		<div id="menu_item"> 
+   			{{ item.title }} 
+				<a href="{{ path('delete_menu_item', {'id': item.id}) }}">
+    			<button type="button"></button></a>   		
+   		</div>
+   	{% endfor %}
+   </div>
+{% endblock %}
+

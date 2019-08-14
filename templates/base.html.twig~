@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>{% block title %}Nl-Galery{% endblock %}</title>
+   {% block stylesheets %}
+   	{{ encore_entry_link_tags('app') }}
+   {% endblock %}
+	<link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+</head>
+
+<body>
+        {% block header %}
+            <header>
+            	<div class="header-container">
+               	<div class="col-logo-pic-container">
+               		<a href="/">
+               			<div class="logo-pic-container">
+		               		<img src="{{ asset('build/images/logo.png')}}" title="logo" alt="logo">
+	               		</div>
+	               	</a>
+                  </div>   
+                  <div class="col-header-title-container">
+                  	<div class="header-title-container">
+                  		{% block header_title %} {% endblock %}
+                  	</div>
+                  </div>                 
+               	<div class="col-user-controll-menu-container">
+							Sign in   Register                    
+                  </div>
+            	</div>
+               <div class="menu-container">
+		     			<ul>		     			
+		     				{% for item in fetched_items %}
+   							<div id="menu-item"> 
+   								<il><a href="{{ item.pathHref }}">{{ item.title }}</a></il> 
+   							</div>
+   						{% endfor %}
+		        		</ul>
+				   </div>       
+            </header>
+        {% endblock %}
+        
+	<div class="container-body-container">
+		{% block body %}
+			<div class="welcome-message">
+				{% block message %} {% endblock %}					
+			</div>            
+		{% endblock %}
+	</div>
+	
+	{% block footer %}
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div id="footer-copyright" class="col-md-6">
+                            <p>&copy; {{ 'now'|date('Y') }} - The Symfony Project</p>
+                            <p>{{ 'mit_license'|trans }}</p>
+                        </div>
+                        <div id="footer-resources" class="col-md-6">
+                            
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        {% endblock %}
+
+        
+	{% block javascripts %}
+		{{ encore_entry_script_tags('app') }}
+	{% endblock %}
+</body>
+</html>
